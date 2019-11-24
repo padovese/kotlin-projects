@@ -14,10 +14,10 @@ fun main(args: Array<String>) {
     println(number3)
     println(number4)
 
-    val joseph : Employee
-    joseph = Employee("Joseph", 6541)
+    val joseph : Employeee
+    joseph = Employeee("Joseph", 6541)
 
-    val giorgio = Employee("Giorgio", 646)
+    val giorgio = Employeee("Giorgio", 646)
 
     println(joseph.toString())
     println(giorgio.toString())
@@ -31,7 +31,7 @@ fun main(args: Array<String>) {
     //In Kotlin, there is no ternary, no for loops, no 'new' keyword,
     // String class here is different from String from Java
 
-    println(joseph is Employee) //Equivalent to instanceof
+    println(joseph is Employeee) //Equivalent to instanceof
 
 
     val vito = "Vito"
