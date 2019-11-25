@@ -19,6 +19,7 @@ fun main(args: Array<String>) {
     println(pa is Any)
 
     println(pa)
+    println(pa.name)
 
 
     val dollar = 4.12
@@ -28,6 +29,11 @@ fun main(args: Array<String>) {
     println("If I buy $amountOfDollars dollars I will have to pay ${dollar * amountOfDollars}")
     println("To access an attribute inside an object use ${pa.name}")
 
+    val tripleQuotes = """This is awesome, you don't need to scape nothing l
+        *ike c:\\my\\path you can just use c:\my\path or even break the line
+        *like this is okay""".trimMargin("*")
+
+    println(tripleQuotes)
 }
 
 class Employeee(val name: String, val id: Int) {
