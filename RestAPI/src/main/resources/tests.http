@@ -1,0 +1,25 @@
+### CREATE A BOOK
+POST localhost:8080/book
+Content-Type: application/json
+
+{
+  "name": "book 1",
+  "language": "ENGLISH"
+}
+
+### GET ALL BOOKS
+GET localhost:8080/book/get-all
+Accept: application/json
+
+### GET A BOOK BY ID
+GET localhost:8080/book/1
+Accept: application/json
+
+### EDIT THE LANGUAGE OF A BOOK
+PATCH localhost:8080/book/1
+Content-Type: application/json
+
+"ITALIAN"
+
+### DELETE A BOOK
+DELETE localhost:8080/book/1
