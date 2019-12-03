@@ -12,6 +12,8 @@ fun main(args: Array<String>) {
     println(employees.minBy { e -> e.startYear })
     println(employees.minBy { it.startYear })
     println(employees.minBy(Employee::startYear))
+
+    println(employees.filter { e -> e.lastName == "Jordan" })
 }
 
 data class Employee(val firstName: String, val lastName: String, val startYear: Int)
