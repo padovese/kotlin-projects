@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
-@Component
+//@Component
 class ClubHandler(private val clubService: ClubService) {
 
     fun getClub(serverRequest: ServerRequest): Mono<ServerResponse> {

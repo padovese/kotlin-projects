@@ -7,10 +7,10 @@ import org.springframework.http.MediaType
 import org.springframework.web.reactive.function.server.router
 
 
-@Configuration
+//@Configuration
 class Router(private val clubHandler: ClubHandler) {
 
-    @Bean
+  //@Bean
     fun clubRouter() = router {
         accept(MediaType.APPLICATION_JSON).nest {
             GET("/", clubHandler::getAllClubs)
