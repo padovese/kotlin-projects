@@ -7,7 +7,7 @@ import reactor.test.StepVerifier
 
 class FluxAndMonoTestFilter {
 
-    val flux = Flux.just("Pa", "do", "ve", "se")
+    private val flux = Flux.just("Pa", "do", "ve", "se")
 
     @Test
     fun testNameFilter(){
