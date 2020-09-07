@@ -2,6 +2,7 @@ package com.github.padovese.reactiveproject.fluxandmonoplayground
 
 import org.junit.jupiter.api.Test
 import reactor.core.publisher.Flux
+import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
 import java.lang.RuntimeException
 
@@ -87,5 +88,14 @@ class FlluxAndMonoTest {
                 .expectError(RuntimeException::class.java)
         //.expectErrorMessage("Forcing error.")
 
+    }
+
+    @Test
+    fun testMono(){
+        val mono = Mono.just("Padovese")
+
+        StepVerifier.create(mono)
+                .expectNext("Padovese")
+                .verifyComplete()
     }
 }
