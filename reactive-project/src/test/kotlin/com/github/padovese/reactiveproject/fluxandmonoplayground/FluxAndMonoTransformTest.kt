@@ -52,4 +52,14 @@ class FluxAndMonoTransformTest {
                 .expectNext(2)
                 .verifyComplete()
     }
+
+    @Test
+    fun testReduceFlux(){
+        val repeatFlux = flux.reduce{ repeatFlux, e -> repeatFlux + e}
+                .log()
+
+        StepVerifier.create(repeatFlux)
+                .expectNext("Padovese")
+                .verifyComplete()
+    }
 }
