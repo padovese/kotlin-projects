@@ -2,11 +2,10 @@ package com.padovese.projectcars.utils
 
 import com.padovese.projectcars.document.Car
 import com.padovese.projectcars.repository.CarRepository
+import java.util.UUID
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.springframework.beans.factory.annotation.Autowired
-import java.util.*
-
 
 abstract class LoadData {
 
