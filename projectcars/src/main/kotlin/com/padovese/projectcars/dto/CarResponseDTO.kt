@@ -1,4 +1,4 @@
-package com.padovese.projectcars.controller
+package com.padovese.projectcars.dto
 
 data class CarResponseDTO(
         val name: String
