@@ -28,7 +28,7 @@ dependencies {
 	}
 	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 	testImplementation("io.projectreactor:reactor-test")
-	testImplementation("io.mockk:mockk:1.10.2")
+	testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
 
 }
 
