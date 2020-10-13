@@ -42,7 +42,8 @@ class CarControllerIntegrationTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus().isOk
-                .returnResult(CarResponseDTO::class.java)
-                .responseBody
+                .expectHeader().contentType(MediaType.APPLICATION_JSON)
+                .expectBodyList(CarResponseDTO::class.java)
+                .hasSize(4)
     }
 }
