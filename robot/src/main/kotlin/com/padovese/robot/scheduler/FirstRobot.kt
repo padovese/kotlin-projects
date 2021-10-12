@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 @Component
 class FirstRobot {
 
-    @Scheduled(fixedRate = 120_000) //2m
+    @Scheduled(fixedRate = 150_000) //2m
     fun createBurstArrows(){
         System.setProperty("java.awt.headless", "false")
 
@@ -58,11 +58,9 @@ class FirstRobot {
         val robot = Robot()
         println("Command initiated: anti idle")
         robot.keyPress(KeyEvent.VK_CONTROL)
-        robot.keyPress(KeyEvent.VK_UP)
-        robot.keyRelease(KeyEvent.VK_UP)
+        getRandomArrowKey()
         delayRange(2_000)
-        robot.keyPress(KeyEvent.VK_DOWN)
-        robot.keyRelease(KeyEvent.VK_DOWN)
+        getRandomArrowKey()
         robot.keyRelease(KeyEvent.VK_CONTROL)
         println("Command terminated: anti idle")
     }
@@ -81,4 +79,26 @@ class FirstRobot {
     }
 
     fun delayRange(range: Long) = Thread.sleep((Math.random() * range).toLong())
+
+    fun getRandomArrowKey(){
+        val robot = Robot()
+
+        val keyEvent = when((Math.random() * 10).toLong()){
+            0L -> KeyEvent.VK_UP
+            1L -> KeyEvent.VK_UP
+            2L -> KeyEvent.VK_UP
+            3L -> KeyEvent.VK_DOWN
+            4L -> KeyEvent.VK_DOWN
+            5L -> KeyEvent.VK_DOWN
+            6L -> KeyEvent.VK_LEFT
+            7L -> KeyEvent.VK_LEFT
+            8L -> KeyEvent.VK_RIGHT
+            9L -> KeyEvent.VK_RIGHT
+            else -> KeyEvent.VK_RIGHT
+
+        }
+        robot.keyPress(keyEvent)
+        robot.keyRelease(keyEvent)
+    }
+
 }
