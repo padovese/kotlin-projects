@@ -43,7 +43,11 @@ class CarControllerIntegrationTest {
                 .exchange()
                 .expectStatus().isOk
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
+//                .expectBody()
+//                .jsonPath("$.name", "fadf")
+
                 .expectBodyList(CarResponseDTO::class.java)
-                .hasSize(4)
+                .hasSize(3)
+
     }
 }
