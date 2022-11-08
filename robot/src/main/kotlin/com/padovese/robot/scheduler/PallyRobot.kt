@@ -5,8 +5,8 @@ import java.awt.event.KeyEvent
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
 
-@Component
-class FirstRobot {
+//@Component
+class PallyRobot {
 
     @Scheduled(fixedRate = 150_000) //2m
     fun createBurstArrows(){
